@@ -64,3 +64,10 @@ python main.py --recommender=SGL --dataset=all_data --aug_type=ED --reg=1e-4 --n
 此檔案會被 BiGNAS 用於後續 **hard item / hard user attack 的加邊操作**。
 
 ---
+
+## Step 4 BiGNAS 的 search.py 最下面 user embedding 路徑要改成自己的
+```text
+    # SGL embedding
+    parser.add_argument("--sgl-dir-target", type=str,
+        default="/mnt/sda1/sherry/BiGNAS/SGL-BiGNAS-new/BiGNAS-Attack/logs/sgl_emb")
+```
